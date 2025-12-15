@@ -15,6 +15,13 @@ public class SearchScreen extends BaseScreen {
     WebElement btnRegistration;
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc='More options']")
     WebElement btnDots;
+    @AndroidFindBy(xpath = "//android.widget.Toast[@text='Login success!']")
+    WebElement popUpMessageSuccess;
+
+    public  boolean validatePopUpMessageSuccess(String text){
+        return  isTextInElementPresent(popUpMessageSuccess, text, 5);
+    }
+
 
 
     public void  clickBtnDots(){
