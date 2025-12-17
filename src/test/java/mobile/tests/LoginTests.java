@@ -15,7 +15,7 @@ public class LoginTests extends AppiumConfig {
     public  void openLoginScreen(){
         new SplashScreen(driver).goToSerchScreen(10);
         SearchScreen searchScreen = new SearchScreen(driver);
-        searchScreen.clickBtnDots();;
+        searchScreen.clickBtnDots();
         searchScreen.clickBtnLogin();
     }
 
@@ -29,7 +29,11 @@ public class LoginTests extends AppiumConfig {
         loginScreen.typeLoginForm(user);
         loginScreen.clickBtnYalla();
         Assert.assertTrue(new SearchScreen(driver)
-                .validatePopUpMessageSuccess("Login success!"));
+                .validatePopUpMessageLoginSuccess("Login success!"));
     }
+
+
+
+
 
 }

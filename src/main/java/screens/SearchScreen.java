@@ -16,12 +16,18 @@ public class SearchScreen extends BaseScreen {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc='More options']")
     WebElement btnDots;
     @AndroidFindBy(xpath = "//android.widget.Toast[@text='Login success!']")
-    WebElement popUpMessageSuccess;
+    WebElement popUpMessageLoginSuccess;
+    @AndroidFindBy(xpath = "//android.widget.Toast[@text='Registration success!']")
+    WebElement popUpMessageRegistrationSuccess;
 
-    public  boolean validatePopUpMessageSuccess(String text){
-        return  isTextInElementPresent(popUpMessageSuccess, text, 5);
+    public  boolean validatePopUpMessageLoginSuccess(String text){
+        return  isTextInElementPresent(popUpMessageLoginSuccess, text, 5);
     }
 
+    public boolean validatePopUpMessageRegistrationSuccess(String text){
+        return  isTextInElementPresent(popUpMessageRegistrationSuccess, text, 5);
+
+    }
 
 
     public void  clickBtnDots(){
@@ -30,7 +36,7 @@ public class SearchScreen extends BaseScreen {
     public void  clickBtnLogin(){
         clickWait(btnLogin, 3);
     }
-    public void  clickBtnLRegistration(){
+    public void clickBtnRegistration(){
         clickWait(btnRegistration, 3);
     }
 
