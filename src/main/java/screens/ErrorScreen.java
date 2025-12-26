@@ -8,6 +8,7 @@ public class ErrorScreen extends  BaseScreen{
 
 
     public ErrorScreen(AppiumDriver driver) {
+
         super(driver);
     }
 
@@ -15,6 +16,7 @@ public class ErrorScreen extends  BaseScreen{
     WebElement errorMessage;
 
     public  boolean validateErrorMessage(String text){
+
         return  isTextInElementPresent(errorMessage,text, 5);
     }
 
